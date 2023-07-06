@@ -3,7 +3,7 @@ const bodyParser=require("body-parser");
 const mailchimp=require("@mailchimp/mailchimp_marketing");
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname+"/public"));
 
 
 app.get('/',(req,res)=>{
